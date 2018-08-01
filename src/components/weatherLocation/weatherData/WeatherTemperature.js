@@ -38,8 +38,9 @@ class WeatherTemperature extends Component{
         const {temperature} = this.props;
         return(
             <div className="weatherTemperatureCont">
-                <WeatherIcons name={this.drawState()} size="2x"/>
-                <span>{`${temperature} C°`}</span>
+                <WeatherIcons name={this.drawState()} size="4x" className="wicon"/>
+                <span className="temperature">{`${temperature}`}</span>
+                <span className="temperatureType">C°</span>
             </div>
         );
     }

@@ -8,8 +8,8 @@ class WeatherExtraInfo extends Component {
         const {humidity, wind} = this.props;
         return (
             <div className="weatherExtraInfoCont">
-                <span>{`${humidity} % -`}</span>
-                <span>{`${wind} Viento`}</span>
+                <span className="extraInfoText">{`Humedad: ${humidity} %`}</span>
+                <span className="extraInfoText">{`Vientos: ${wind}`}</span>
             </div>
         );
     }
