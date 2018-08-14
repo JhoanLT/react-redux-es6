@@ -45,10 +45,34 @@
     margin: 0;
 }
 .weatherLocationCont{
-    width: 400px;
-    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    min-width: 430px;
+    padding: 25px;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     -webkit-box-shadow: 10px 8px 38px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 8px 38px -5px rgba(0,0,0,0.75);
     box-shadow: 10px 8px 38px -5px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.locationList{
+    height: 85vh;
+    overflow: auto;
+}
+
+@media (max-width: 64em) {
+    .locationList{
+        max-height: 45vh;
+        margin-bottom: 20px;
+    }
+}
+
+.forecast-title {
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

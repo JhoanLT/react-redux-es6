@@ -26,3 +26,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.detail {
+    background: gray;
+    height: 85vh;
+    width: calc(100% - 40px);
+    overflow: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@media (max-width: 64em) {
+    .detail {
+        height: 40vh;
+    }
+}
