@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import LocationList from "./components/LocationList";
 import {
     Grid,
     Row,
@@ -18,7 +17,8 @@ import {withStyles} from '@material-ui/core/styles';
 import {
     Menu,
 } from '@material-ui/icons';
-import ForecastExtended from "./components/ForecastExtended";
+import LocationListContainer from "./containers/LocationListContainer";
+import ForecastExtendedContainer from "./containers/ForecastExtendedContainer";
 
 const cities = [
     "Buenos aires,ar",
@@ -37,22 +37,10 @@ const styles = (theme) => ({
     },
 });
 
-
 class App extends Component {
-
-    state = {
-        city : null
-    };
-
-    handleSelectionLocation = (city) =>{
-        this.setState({
-            city
-        })
-    };
 
   render() {
       const {classes} = this.props;
-      const {city} = this.state;
     return (
         <Fragment>
           <Grid>
@@ -73,12 +61,12 @@ class App extends Component {
               </Row>
               <Row>
                   <Col xs={12} md={6}>
-                    <LocationList cities={cities} onSelectLocation={this.handleSelectionLocation}/>
+                    <LocationListContainer cities={cities}/>
                   </Col>
                   <Col xs={12} md={6}>
                       <Paper zdepth={4}>
                           <div className={"detail"}>
-                              {city && <ForecastExtended city={city}/>}
+                              <ForecastExtendedContainer/>
                           </div>
                       </Paper>
                   </Col>
