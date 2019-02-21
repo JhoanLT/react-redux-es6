@@ -17,9 +17,10 @@ class LocationList extends Component {
                 {cities.map((city, key) => {
                     return (
                         <WeatherLocation
-                            city={city}
+                            city={city.name}
                             key={`city-name-${key}`}
                             onWeatherLocationClick={() => this.handleWeatherLocationClick(city)}
+                            data={city.data}
                         />
                     );
                 })}
